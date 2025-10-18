@@ -1,62 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Computer Vision</title>
-  <link rel="stylesheet" href="computer_vision.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Vision</title>
+<link rel="stylesheet" href="computer_vision.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="particles"></div>
 
-  <header>
-    <h1>Computer Vision</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="intro_of_ai.html">About AI</a>
-      <a href="machine_learning.html">Machine Learning</a>
-      <a href="computer_vision.html" class="active">Computer Vision</a>
-      <a href="deep_learning.html">Deep Learning</a>
-      <a href="real_world_application.html">Applications</a>
-    </nav>
-  </header>
+<header>
+  <h1>Computer Vision</h1>
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#intro">Intro</a>
+    <a href="#applications">Applications</a>
+    <a href="#steps">How it Works</a>
+    <a href="#tools">AI Tools</a>
+    <a href="#future">Future</a>
+  </nav>
+</header>
 
-  <main>
-    <section class="hero">
-      <img src="https://cdn.pixabay.com/photo/2017/06/28/06/52/eye-2443338_1280.jpg" alt="AI Eye Vision" class="hero-img">
-      <div class="hero-text">
-        <h2>The Power of Computer Vision</h2>
-        <p>Giving machines the ability to see, analyze, and understand the world — just like humans do.</p>
-      </div>
-    </section>
+<!-- Hero Section -->
+<section id="hero" class="hero-section">
+  <canvas id="particles"></canvas>
+  <video class="hero-video" autoplay muted loop>
+    <source src="videos/hero-1.mp4" type="video/mp4">
+  </video>
+  <button class="next-btn">Next Video</button>
+  <div class="hero-overlay">
+    <h2 class="typing-text" data-text="Explore Computer Vision"></h2>
+    <p>AI making machines see and understand the world</p>
+  </div>
+</section>
 
-    <section class="card fade">
-      <h2>How Computer Vision Works</h2>
-      <p>Computer Vision uses deep learning models to process and interpret visual data from the world. It powers facial recognition, autonomous vehicles, and medical imaging systems.</p>
-      <img src="https://cdn.pixabay.com/photo/2020/06/23/13/52/ai-5339806_1280.jpg" alt="Vision Technology">
-    </section>
+<main>
+  <!-- Intro Section -->
+  <section id="intro" class="content-section autoDisplay">
+    <div class="text-block">
+      <h2>What is Computer Vision?</h2>
+      <p>Computer Vision is a field of AI that enables machines to interpret visual information from the world in real-time.</p>
+    </div>
+    <div class="media-block">
+      <img src="images/cv_intro.jpg" alt="Computer Vision">
+    </div>
+  </section>
 
-    <section class="card fade">
-      <h2>Key Applications</h2>
+  <!-- Applications Section -->
+  <section id="applications" class="content-section autoDisplay reverse">
+    <div class="text-block">
+      <h2>Applications</h2>
       <ul>
-        <li>Self-driving cars and traffic systems</li>
-        <li>Medical diagnostics and image analysis</li>
-        <li>Facial recognition and security systems</li>
-        <li>Object detection in factories and robotics</li>
+        <li>Autonomous Vehicles</li>
+        <li>Medical Imaging</li>
+        <li>Security & Surveillance</li>
+        <li>Retail Analytics</li>
       </ul>
-    </section>
+    </div>
+    <div class="media-block">
+      <video src="videos/cv_examples.mp4" controls></video>
+    </div>
+  </section>
 
-    <section class="card fade">
-      <h2>Why It Matters</h2>
-      <p>From healthcare to entertainment, computer vision is transforming how machines interact with the physical world — unlocking smarter, safer, and more connected systems.</p>
-      <img src="https://cdn.pixabay.com/photo/2017/08/10/07/32/artificial-intelligence-2616343_1280.jpg" alt="AI Future">
-    </section>
-  </main>
+  <!-- How it Works Section -->
+  <section id="steps" class="content-section autoDisplay">
+    <div class="text-block">
+      <h2>How Computer Vision Works</h2>
+      <ul>
+        <li>Image Acquisition</li>
+        <li>Preprocessing</li>
+        <li>Feature Extraction</li>
+        <li>Segmentation</li>
+        <li>Recognition & Classification</li>
+        <li>Decision Making</li>
+      </ul>
+    </div>
+    <div class="media-block">
+      <img src="images/cv_steps.jpg" alt="CV Steps">
+    </div>
+  </section>
 
-  <footer>
-    © 2025 AI Explorer | Powered by Innovation
-  </footer>
+  <!-- AI Tools Section -->
+  <section id="tools" class="content-section autoDisplay reverse">
+    <div class="text-block">
+      <h2>AI Tools in CV</h2>
+      <ul>
+        <li>OpenCV</li>
+        <li>TensorFlow & Keras</li>
+        <li>PyTorch</li>
+        <li>YOLO (Object Detection)</li>
+      </ul>
+    </div>
+    <div class="media-block">
+      <img src="images/cv_ai_tools.jpg" alt="CV Tools">
+    </div>
+  </section>
 
-  <script src="computer_vision.js"></script>
+  <!-- Future Section -->
+  <section id="future" class="content-section autoDisplay">
+    <div class="text-block">
+      <h2>Future of Computer Vision</h2>
+      <ul>
+        <li>Smart Cities & Traffic Management</li>
+        <li>AR/VR Experiences</li>
+        <li>Robotics & Automation</li>
+        <li>Advanced Healthcare Diagnosis</li>
+      </ul>
+    </div>
+    <div class="media-block">
+      <img src="images/cv_future.jpg" alt="Future of CV">
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2025 AI Explorer | All rights reserved
+</footer>
+
+<script src="computer_vision.js"></script>
 </body>
 </html>
