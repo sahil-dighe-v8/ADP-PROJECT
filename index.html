@@ -1,40 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Website - Home</title>
-  <link rel="stylesheet" href="Index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Tech Home</title>
+    
+    <!-- Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700;900&display=swap">
+
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <header>
-    <h1>AI Explorer</h1>
-    <nav>
-     <a href="index.html">Home</a>
-      <a href="intro_of_ai.html">About AI</a>
-      <a href="machine_learning.html">Machine Learning</a>
-      <a href="computer_vision.html">Computer Vision</a>
-      <a href="deep_learning.html">Deep Learning</a>
-      <a href="real_world_application.html" class="active">Applications</a>
-    </nav>
-  </header>
+<div class="container">
 
-  <main>
-    <div class="card">
-      <h2>Welcome to AI Explorer</h2>
-      <p>Artificial Intelligence is reshaping the world, from healthcare to entertainment. This site explores key areas where AI is making an impact.</p>
-      <ul>
-        <li>Understand AI concepts</li>
-        <li>Explore Machine Learning and Deep Learning</li>
-        <li>Learn about NLP and Computer Vision</li>
-        <li>Discover real-world AI applications</li>
-      </ul>
-      <a href="what_is_ai.html" class="button">Explore AI</a>
-    </div>
-  </main>
+    <!-- Header -->
+    <header>
+        <div class="head-left">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+        <div class="head-right">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
 
-  <footer>
-    © 2025 AI Explorer | All rights reserved
-  </footer>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="videos/hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-info">
+            <h1>Futuristic Tech</h1>
+            <p>Innovating the next generation of AI, IoT, and immersive systems.</p>
+            <button>Explore Now</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <p>Welcome to Futuristic Tech</p>
+        <h1>Shaping Tomorrow's Technology Today</h1>
+        <p>We create cutting-edge AI, IoT, and immersive solutions that redefine how people interact with technology.</p>
+    </section>
+
+    <!-- Features Section (Cards) -->
+    <section class="features-section" id="features">
+        <h1>Our Features</h1>
+        <div class="features-cards">
+            <div class="feature-card">
+                <div class="card-sentence">Artificial Intelligence</div>
+                <div class="card-content">
+                    <p>Smart algorithms for analytics, automation, and prediction.</p>
+                    <video loop muted playsinline>
+                        <source src="videos/ai.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="card-sentence">Robotics</div>
+                <div class="card-content">
+                    <p>Interactive robots for industrial and personal use.</p>
+                    <video loop muted playsinline>
+                        <source src="videos/robot.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="card-sentence">IoT Systems</div>
+                <div class="card-content">
+                    <p>Connected devices for smart environments.</p>
+                    <video loop muted playsinline>
+                        <source src="videos/iot.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="card-sentence">VR & AR</div>
+                <div class="card-content">
+                    <p>Immersive experiences for entertainment and training.</p>
+                    <video loop muted playsinline>
+                        <source src="videos/vr.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section" id="team">
+        <h1>Meet the Team</h1>
+        <div class="team-cards">
+            <div class="team-card">
+                <img src="img/member1.png" alt="Member 1">
+                <h2>Jane Doe</h2>
+                <p>AI Specialist</p>
+            </div>
+            <div class="team-card">
+                <img src="img/member2.png" alt="Member 2">
+                <h2>John Smith</h2>
+                <p>Robotics Engineer</p>
+            </div>
+            <div class="team-card">
+                <img src="img/member3.png" alt="Member 3">
+                <h2>Alice Lee</h2>
+                <p>IoT Developer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h1>Contact Us</h1>
+        <p>Start building futuristic solutions with our team.</p>
+        <button>Get in Touch</button>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <p>All rights reserved © 2025</p>
+        <ul>
+            <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+            <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+            <li><a href="#"><i class='bx bxl-linkedin'></i></a></li>
+            <li><a href="#"><i class='bx bxl-github'></i></a></li>
+            <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+        </ul>
+    </section>
+</div>
+
+<!-- JS -->
+<script src="index.js"></script>
 </body>
 </html>
