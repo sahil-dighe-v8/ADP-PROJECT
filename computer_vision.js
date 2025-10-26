@@ -25,31 +25,58 @@ document.addEventListener("DOMContentLoaded", () => {
         initialBox.style.display = 'none';
     });
 
-    // Expand card & play video
+    // Expand/collapse cards (video click handled separately)
     cards.forEach(card => {
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (e) => {
+            // Ignore clicks directly on video
+            if (e.target.tagName.toLowerCase() === 'video') return;
+
             // Collapse other cards
             cards.forEach(c => {
                 if (c !== card) {
                     c.classList.remove('active');
                     const vid = c.querySelector('video');
-                    if (vid) vid.pause();
+                    if (vid) {
+                        vid.pause();
+                        vid.currentTime = 0;
+                        vid.muted = true;
+                    }
                 }
             });
 
-            // Toggle clicked card
+            // Toggle current card
+            const isActive = card.classList.contains('active');
             card.classList.toggle('active');
 
-            // Play/Pause video inside the card
+            // If the card is being closed, stop its video
             const video = card.querySelector('video');
-            if (video) {
-                if (card.classList.contains('active')) video.play();
-                else video.pause();
+            if (video && isActive) {
+                video.pause();
+                video.currentTime = 0;
+                video.muted = true;
             }
         });
     });
 
-    // Card button alerts (if you add buttons inside cards)
+    // Play video with sound only when clicked directly
+    const videos = document.querySelectorAll('.card-video');
+    videos.forEach(video => {
+        video.addEventListener('click', (e) => {
+            e.stopPropagation(); // prevent triggering card click
+            if (video.paused) {
+                // Unmute and play
+                video.muted = false;
+                video.volume = 1.0;
+                video.play();
+            } else {
+                // Pause and mute again
+                video.pause();
+                video.muted = true;
+            }
+        });
+    });
+
+    // Card button alerts (optional)
     document.querySelectorAll('.card button').forEach(button => {
         button.addEventListener('click', (e) => {
             const topic = e.target.closest('.card').querySelector('.card-sentence').innerText;
@@ -60,11 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Hero video rotation every 8 seconds
     const heroVideo = document.querySelector('.hero-video');
     const videoList = [
-        'videos/cv-1.mp4',
-        'videos/cv-2.mp4',
-        'videos/cv-3.mp4',
-        'videos/cv-4.mp4',
-        'videos/cv-5.mp4'
+        'videos/cv-6.mp4',
     ];
     let videoIndex = 0;
     setInterval(() => {
