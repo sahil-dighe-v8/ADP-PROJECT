@@ -1,13 +1,24 @@
+/* Libre Franklin font from Google Fonts */
+
+/* Italic */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/librefranklin/v20/jizBREVItHgc8qDIbSTKq4XkRiUa6zgTjmbI.woff2) format('woff2');
+}
+
 /* Normal */
 @font-face {
-    font-family: 'Libre Franklin';
-    font-style: normal;
-    font-weight: 100 900;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/librefranklin/v20/jizDREVItHgc8qDIbSTKq4XkRiUf2zc.woff2) format('woff2');
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/librefranklin/v20/jizDREVItHgc8qDIbSTKq4XkRiUf2zc.woff2) format('woff2');
 }
 
 /* Apply globally */
 body {
-    font-family: 'Libre Franklin', Arial, Helvetica, sans-serif;
+  font-family: 'Libre Franklin', Arial, Helvetica, sans-serif;
 }

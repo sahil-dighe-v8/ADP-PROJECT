@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer Vision - AI</title>
     
-    <!-- Font Styles -->
+    <!-- Font CSS -->
     <link rel="stylesheet" href="cv_font.css">
     
-    <!-- Main Styles -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="computer_vision.css">
     
     <!-- Boxicons for icons -->
@@ -21,94 +21,191 @@
     <header>
         <div class="head-left">
             <img src="img/logo.png" alt="Logo">
-            <h2>COMPUTER VISION </h2>
         </div>
-        <nav class="head-right">
-            <a href="index.html" data-video="0">Home</a>
-            <a href="about.html" data-video="1">Introduction to AI</a>
-            <a href="projects.html" data-video="2">Machine learning </a>
-            <a href="team.html" data-video="3">Deep learning </a>
-            <a href="computer_vision.html" data-video="4">computer vision</a>
-            <a href="contact.html" data-video="5">Real life application</a>
-        </nav>
+        <div class="head-right">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#advantages">Advantages</a>
+            <a href="#disadvantages">Disadvantages</a>
+            <a href="#uses">Uses</a>
+            <a href="#info">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" id="hero">
         <video class="hero-video" loop autoplay muted playsinline>
             <source src="videos/cv-1.mp4" type="video/mp4">
         </video>
         <div class="hero-info">
             <h1>Computer Vision</h1>
             <p>Enabling machines to see, understand, and interpret the visual world.</p>
+            <button>Learn More</button>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about-section">
+    <section class="about-section" id="about">
         <p>Welcome to AI & Computer Vision</p>
         <h1>Transforming Visual Data into Insights</h1>
-        <p>Computer Vision (CV) is a field of AI that allows computers to analyze images and videos, identify patterns, and make decisions. Applications include facial recognition, autonomous vehicles, medical imaging, and industrial automation.</p>
+        <p>Computer Vision (CV) is a field of AI that allows computers to analyze images and videos, identify patterns, and make decisions. Applications range from facial recognition, autonomous vehicles, medical imaging, to industrial automation.</p>
     </section>
 
-    <!-- Info Cards Section -->
-    <section class="section-info">
-        <h3>Core Topics in Computer Vision</h3>
-        <p>Explore the most important areas of Computer Vision that power AI solutions.</p>
-        <div class="info-cards">
-            <div class="card autoDisplay" data-topic="Object Detection">
-                <h1>Object Detection</h1>
-                <p>Detects and locates objects in images or videos using algorithms like YOLO, SSD, and Faster R-CNN.</p>
-                <video src="videos/cv-1.mp4" muted playsinline></video>
-                <button>Learn More</button>
-            </div>
-            <div class="card autoDisplay" data-topic="Image Classification">
-                <h1>Image Classification</h1>
-                <p>Classifies images into categories using CNNs and deep learning models.</p>
-                <video src="videos/cv-2.mp4" muted playsinline></video>
-                <button>Learn More</button>
-            </div>
-            <div class="card autoDisplay" data-topic="Face Recognition">
-                <h1>Face Recognition</h1>
-                <p>Identifies and verifies individuals by analyzing facial features using deep learning.</p>
-                <video src="videos/cv-3.mp4" muted playsinline></video>
-                <button>Learn More</button>
-            </div>
-            <div class="card autoDisplay" data-topic="Gesture Detection">
-                <h1>Gesture Detection</h1>
-                <p>Recognizes human gestures in real-time for interactive applications.</p>
-                <video src="videos/cv-4.mp4" muted playsinline></video>
-                <button>Learn More</button>
-            </div>
-            <div class="card autoDisplay" data-topic="Scene Understanding">
-                <h1>Scene Understanding</h1>
-                <p>Analyzes images to interpret objects, actions, and context in a scene.</p>
-                <video src="videos/cv-5.mp4" muted playsinline></video>
-                <button>Learn More</button>
-            </div>
+    <!-- Advantages Section -->
+    <section class="advantages-section" id="advantages">
+        <h1>Advantages of Computer Vision</h1>
+        <ul>
+            <li>Automates repetitive tasks, reducing human effort.</li>
+            <li>High accuracy in detecting patterns and objects.</li>
+            <li>Works 24/7 without fatigue, increasing efficiency.</li>
+            <li>Enables advanced applications like autonomous vehicles and medical diagnosis.</li>
+        </ul>
+    </section>
+
+    <!-- Disadvantages Section -->
+    <section class="disadvantages-section" id="disadvantages">
+        <h1>Disadvantages of Computer Vision</h1>
+        <ul>
+            <li>High cost of implementation, including hardware and software.</li>
+            <li>Dependent on quality of data; poor data can reduce accuracy.</li>
+            <li>Complex algorithms may require skilled professionals.</li>
+            <li>Privacy concerns when used for surveillance or facial recognition.</li>
+        </ul>
+    </section>
+
+    <!-- Uses Section -->
+    <section class="uses-section" id="uses">
+        <h1>Uses of Computer Vision</h1>
+        <ul>
+            <li>Self-driving cars: detecting obstacles and lanes.</li>
+            <li>Medical imaging: detecting diseases from scans.</li>
+            <li>Industrial automation: quality control in manufacturing.</li>
+            <li>Retail: automated checkout and customer behavior analysis.</li>
+            <li>Security: facial recognition and anomaly detection.</li>
+        </ul>
+    </section>
+
+    <!-- Core Topics Section -->
+    <section class="core-topics" id="info">
+        <!-- Initial Box -->
+        <div class="initial-box">Core Topics in Computer Vision</div>
+
+        <!-- Cards Container -->
+        <div class="info-cards-container">
+            <div class="info-cards">
+
+                <!-- Object Detection Card -->
+                <div class="card">
+                    <div class="card-sentence">Object Detection</div>
+                    <div class="card-content">
+                        <div class="card-content-wrapper">
+                            <div class="card-text">
+                                <p>Object Detection identifies and locates objects in images or videos.</p>
+                                <ul>
+                                    <li>Autonomous vehicles</li>
+                                    <li>Industrial automation</li>
+                                    <li>Surveillance and security</li>
+                                </ul>
+                            </div>
+                            <div class="card-video-wrapper">
+                                <video class="card-video" loop muted playsinline>
+                                    <source src="videos/cv-1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Classification Card -->
+                <div class="card">
+                    <div class="card-sentence">Image Classification</div>
+                    <div class="card-content">
+                        <div class="card-content-wrapper">
+                            <div class="card-text">
+                                <p>Image Classification assigns categories to images based on content.</p>
+                                <ul>
+                                    <li>Medical imaging</li>
+                                    <li>Retail product categorization</li>
+                                    <li>Facial recognition systems</li>
+                                </ul>
+                            </div>
+                            <div class="card-video-wrapper">
+                                <video class="card-video" loop muted playsinline>
+                                    <source src="videos/cv-2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Face Recognition Card -->
+                <div class="card">
+                    <div class="card-sentence">Face Recognition</div>
+                    <div class="card-content">
+                        <div class="card-content-wrapper">
+                            <div class="card-text">
+                                <p>Face Recognition identifies or verifies a person from a digital image or video frame.</p>
+                                <ul>
+                                    <li>Security and surveillance</li>
+                                    <li>Attendance systems</li>
+                                    <li>Authentication in devices</li>
+                                </ul>
+                            </div>
+                            <div class="card-video-wrapper">
+                                <video class="card-video" loop muted playsinline>
+                                    <source src="videos/cv-3.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gesture Detection Card -->
+                <div class="card">
+                    <div class="card-sentence">Gesture Detection</div>
+                    <div class="card-content">
+                        <div class="card-content-wrapper">
+                            <div class="card-text">
+                                <p>Gesture Detection interprets human movements to enable touchless interaction.</p>
+                                <ul>
+                                    <li>Touchless UI control</li>
+                                    <li>Gaming applications</li>
+                                    <li>Assistive technology</li>
+                                </ul>
+                            </div>
+                            <div class="card-video-wrapper">
+                                <video class="card-video" loop muted playsinline>
+                                    <source src="videos/cv-4.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
         <p>Join the AI Revolution</p>
         <h1>Start Building Computer Vision Solutions</h1>
         <button>Get Started</button>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>All rights reserved 2025</p>
+    <section class="footer">
+        <p>All rights reserved © 2025</p>
         <ul>
             <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
             <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
             <li><a href="#"><i class='bx bxl-linkedin'></i></a></li>
             <li><a href="#"><i class='bx bxl-github'></i></a></li>
-            <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+            <li><a href="https://www.instagram.com/sahil_dighe_v8?igsh=dGxmZnh4ajRhN25h"><i class='bx bxl-instagram'></i></a></li>
         </ul>
-    </footer>
+    </section>
 </div>
-
 <script src="computer_vision.js"></script>
 </body>
 </html>
+
