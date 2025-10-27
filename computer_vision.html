@@ -99,11 +99,12 @@
                     <div class="card-content">
                         <div class="card-content-wrapper">
                             <div class="card-text">
-                                <p><h3> Detection identifies and locates objects in images or videos.</h3></p>
+                                <p><h3>Object detection works by using a trained model (usually a CNN) to find and locate objects in an image.</h3></p>
                                 <ul>
-                                    <li>Autonomous vehicles</li>
-                                    <li>Industrial automation</li>
-                                    <li>Surveillance and security</li>
+                                    <li><h4>image is analyzed to extract features (like edges, shapes, textures).</h4></li>
+                                    <li><h4>The model predicts bounding boxes around objects and assigns labels (e.g., car, person) with confidence scores.</h4></li>
+                                    <li><h4>Overlapping boxes are filtered using non-max suppression.</h4></li>
+                                    <li><h4>The final output shows the detected objects with boxes and labels.</h4></li>
                                 </ul>
                             </div>
                             <div class="card-video-wrapper">
@@ -120,12 +121,14 @@
     <div class="card-content">
         <div class="card-content-wrapper">
             <div class="card-text">
-                <p>OCR technology converts images of text into machine-readable text.</p>
-                <ul>
-                    <li>Document digitization</li>
-                    <li>License plate recognition</li>
-                    <li>Automated form processing</li>
-                </ul>
+                <p><h3>Optical Character Recognition (OCR) is a technology that converts printed or handwritten text from images or scanned documents into editable and searchable text.</h3></p>
+                    <ul>
+                        <li><h4>Image Input: The system takes a photo or scan containing text.</h4></li>
+                        <li><h4>Preprocessing: It cleans the image — removes noise, adjusts brightness, and aligns text.</h4></li>
+                        <li><h4>Text Detection: It locates areas that contain text.</h4></li>
+                        <li><h4>Character Recognition: Each letter or word is identified using pattern recognition or deep learning models.</h4></li>
+                        <li><h4>Output: The recognized text is converted into digital form (like a .txt or searchable PDF file).</h4></li>
+                    </ul>
             </div>
             <div class="card-video-wrapper">
                 <video class="card-video" loop muted playsinline>
@@ -143,11 +146,12 @@
                     <div class="card-content">
                         <div class="card-content-wrapper">
                             <div class="card-text">
-                                <p>Image Classification assigns categories to images based on content.</p>
+                                <p><h3>Image classification is a computer vision process that identifies what an image contains.</h3></p>
                                 <ul>
-                                    <li>Medical imaging</li>
-                                    <li>Retail product categorization</li>
-                                    <li>Facial recognition systems</li>
+                                    <li><h4>Input: You give the model an image.</h4></li>
+                                    <li><h4>Feature Extraction: A CNN (Convolutional Neural Network) analyzes the image to learn visual patterns like edges, shapes, and textures.</h4></li>
+                                    <li><h4>Prediction: The model compares these features to what it learned during training.</h4></li>
+                                    <li><h4>Output: It assigns a label (like “cat,” “car,” or “tree”) with a confidence score.</h4></li>
                                 </ul>
                             </div>
                             <div class="card-video-wrapper">
@@ -165,11 +169,14 @@
                     <div class="card-content">
                         <div class="card-content-wrapper">
                             <div class="card-text">
-                                <p>Face Recognition identifies or verifies a person from a digital image or video frame.</p>
+                                <p><h3>Face recognition is a technology that identifies or verifies a person by analyzing their facial features.</h3></p>
                                 <ul>
-                                    <li>Security and surveillance</li>
-                                    <li>Attendance systems</li>
-                                    <li>Authentication in devices</li>
+                                     <li><h4>Face Detection: The system first finds faces in an image or video.</h4></li>
+                                    <li><h4>Feature Extraction: It measures key facial features like the distance between eyes, nose shape, and jawline.</h4></li>
+                                    <li><h4>Face Encoding: These features are converted into a unique numerical code (called a face embedding).</h4></li>
+                                    <li><h4>Matching: The code is compared with stored face data in a database.</h4></li>
+                                    <li><h4>Result: If it matches, the person is identified or verified.</h4></li>
+                                    <li><h4>Example: Unlocking your phone with Face ID or tagging people in photos automatically.</h4></li>
                                 </ul>
                             </div>
                             <div class="card-video-wrapper">
@@ -187,11 +194,13 @@
                     <div class="card-content">
                         <div class="card-content-wrapper">
                             <div class="card-text">
-                                <p>Gesture Detection interprets human movements to enable touchless interaction.</p>
+                                <p><h3>Gesture detection is a technology that recognizes human movements or hand signs and interprets them as commands.</h3></p>
                                 <ul>
-                                    <li>Touchless UI control</li>
-                                    <li>Gaming applications</li>
-                                    <li>Assistive technology</li>
+                                    <li><h4>Input: A camera or sensor captures the person’s movement.</h4></li>
+                                    <li><h4>Preprocessing: The system cleans and tracks the hand or body region.</h4></li>
+                                    <li><h4>Feature Extraction: It analyzes motion, shape, or key points (like finger positions or joint angles).</h4></li>
+                                    <li><h4>Classification: A trained model compares the movement with known gestures.</h4></li>
+                                     <li><h4>Output: The system performs an action — like turning up volume, swiping slides, or controlling a robot.</h4></li>
                                 </ul>
                             </div>
                             <div class="card-video-wrapper">

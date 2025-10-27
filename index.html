@@ -9,25 +9,28 @@
 <body>
 
 <!-- Header -->
-    <header>
-        <div class="head-left">
-            <img src="img/logo.png" alt="Logo">
-        </div>
-        <div class="head-right">
-            <a href="index.html">HOME</a>
-            <a href="try.html">INTRO</a>
-            <a href="#advantages">MACHINE LEARNING</a>
-            <a href="#disadvantages">DEEP LEARNING</a>
-            <a href="computer_vision.html">COMPUTER VISION</a>
-            <a href="#info">SENARIO</a>
-        </div>
-    </header>
+<header>
+    <div class="head-left">
+        <img src="img/logo.png" alt="Logo">
+    </div>
+    <div class="head-right">
+        <a href="index.html">HOME</a>
+        <a href="try.html">INTRO</a>
+        <a href="#advantages">MACHINE LEARNING</a>
+        <a href="#disadvantages">DEEP LEARNING</a>
+        <a href="computer_vision.html">COMPUTER VISION</a>
+        <a href="#team">TEAM</a>
+    </div>
+</header>
 
-
-<!-- Hero Section -->
+<!-- Hero Section with Background Video -->
 <section class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="video/ai-vision.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <div class="hero-content">
-        <h1>Exploring the Power of AI </h1>
+        <h1>Exploring the Power of AI</h1>
         <p>Discover how AI transforms images and videos into actionable insights.</p>
         <a href="#team" class="cta-btn">Explore Our Team</a>
     </div>
@@ -40,36 +43,51 @@
     <p>Computer Vision focuses on extracting information from images and videos, powering applications like facial recognition, object detection, and real-time analysis.</p>
 </section>
 
-
-<!-- Team -->
+<!-- Team Section -->
 <section id="team" class="team">
     <h2>Meet the Team</h2>
     <div class="team-cards">
+
         <div class="card">
-            <div class="avatar"></div>
+            <div class="avatar">
+                <img src="img/team1.jpg" alt="Alice Johnson">
+            </div>
             <h3>Alice Johnson</h3>
             <p>Object Detection AI</p>
         </div>
+
         <div class="card">
-            <div class="avatar"></div>
+            <div class="avatar">
+                <img src="img/team2.jpg" alt="Bob Smith">
+            </div>
             <h3>Bob Smith</h3>
             <p>Facial Recognition System</p>
         </div>
+
         <div class="card">
-            <div class="avatar"></div>
-            <h3>SAHIL DIGHE</h3>
-            <p>COMPUTER VISION</p>
+            <div class="avatar">
+                <img src="img/sahil.jpg" alt="Sahil Dighe">
+            </div>
+            <h3>Sahil Dighe</h3>
+            <p>Computer Vision</p>
         </div>
+
         <div class="card">
-            <div class="avatar"></div>
+            <div class="avatar">
+                <img src="img/team4.jpg" alt="David Kim">
+            </div>
             <h3>David Kim</h3>
             <p>Video Analysis AI</p>
         </div>
+
         <div class="card">
-            <div class="avatar"></div>
+            <div class="avatar">
+                <img src="img/team5.jpg" alt="Eva Patel">
+            </div>
             <h3>Eva Patel</h3>
             <p>Real-time Computer Vision</p>
         </div>
+
     </div>
 </section>
 
@@ -78,6 +96,6 @@
     <p>© 2025 AI Computer Vision | GitHub | LinkedIn</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="index.js"></script>
 </body>
 </html>

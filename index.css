@@ -10,7 +10,7 @@ body {
 
 a { text-decoration: none; color: inherit; }
 
-/* =================== Header =================== */
+/* Header */
 header {
     position: fixed;
     top: 0;
@@ -26,40 +26,12 @@ header {
     border-bottom: 1px solid #00ffcc;
 }
 
-.head-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
+.head-left img { height: 45px; width: 45px; }
 
-.head-left img {
-    height: 45px;
-    width: 45px;
-}
-
-.head-left button {
-    padding: 8px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 700;
-    background: #00ffcc;
-    color: #000;
-    transition: 0.3s;
-}
-
-.head-left button:hover {
-    opacity: 0.8;
-}
-
-.head-right {
-    display: flex;
-    gap: 15px;
-}
+.head-right { display: flex; gap: 15px; }
 
 .head-right a {
     color: #fff;
-    text-decoration: none;
     font-weight: 600;
     padding: 5px 12px;
     border-radius: 10px;
@@ -71,41 +43,46 @@ header {
     color: #000;
 }
 
-
-/* =================== Responsive Design =================== */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
-    }
-
-    .head-left,
-    .head-right {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .head-right {
-        margin-top: 10px;
-    }
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%) contrast(1.2);
+    z-index: -1;
+}
 
-/* Hero */
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(120deg, #001f3f, #0a0a0a);
+.hero-content {
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.hero-content.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hero h1 {
     font-size: 110px;
-    margin-bottom: 20px;
     color: #00ffff;
+    margin-bottom: 20px;
 }
 
 .hero p {
@@ -128,53 +105,54 @@ header {
 }
 
 /* Sections */
-section {
-    padding: 100px 50px;
-    text-align: center;
-}
+section { padding: 100px 50px; text-align: center; }
 
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: #00ffff;
-}
+section h2 { font-size: 2rem; margin-bottom: 40px; color: #00ffff; }
 
-/* Feature Cards */
-.feature-cards, .team-cards {
+/* Team Cards */
+.team-cards {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
 }
 
-.feature-cards .card, .team-cards .card {
-    background-color: #111;
-    padding: 30px 20px;
-    border-radius: 10px;
-    flex: 1 1 220px;
-    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
-}
-
-.feature-cards .card:hover, .team-cards .card:hover {
-    transform: translateY(-10px);
-    background-color: #222;
-    box-shadow: 0 0 15px #00ffff;
-}
-
-/* Team Avatar Placeholder */
-.team-cards .avatar {
-    width: 80px;
-    height: 80px;
-    background-color: #0077ff;
-    border-radius: 50%;
-    margin: 0 auto 15px auto;
-}
-
-/* Footer */
-footer {
-    background-color: #111;
+.card {
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    padding: 20px;
+    width: 220px;
     text-align: center;
-    padding: 30px 0;
-    font-size: 0.9rem;
-    margin-top: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(30px) rotateY(0deg) rotateX(0deg) scale(1);
+    will-change: transform, opacity;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0) rotateY(0deg) rotateX(0deg) scale(1);
+}
+
+.card:hover {
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
+}
+
+.avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #00aaff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header { flex-direction: column; align-items: flex-start; padding: 10px 20px; }
+    .head-left, .head-right { width: 100%; justify-content: space-between; }
+    .head-right { margin-top: 10px; }
+    .hero h1 { font-size: 45px; }
+    .hero p { font-size: 18px; }
+    .cta-btn { padding: 10px 20px; font-size: 16px; }
 }
