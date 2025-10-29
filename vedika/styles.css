@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #f2f2f2;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid cyan;
+  background: linear-gradient(90deg, #001f1f, #003333);
+  box-shadow: 0 0 20px cyan;
+}
+
+h1 {
+  color: cyan;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: cyan;
+  color: black;
+  box-shadow: 0 0 15px cyan;
+}
+
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+.content h2 {
+  color: cyan;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.content p {
+  color: #ccc;
+  font-size: 1.1rem;
+  max-width: 850px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  background-color: #111;
+  border: 1px solid cyan;
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  transition: 0.3s;
+  box-shadow: 0 0 15px cyan;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px cyan;
+}
+
+.card h3 {
+  color: cyan;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.card p {
+  color: #aaa;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.card ul {
+  list-style: none;
+  text-align: left;
+  color: #ccc;
+}
+
+.card ul li {
+  margin: 5px 0;
+  padding-left: 10px;
+  position: relative;
+}
+
+.card ul li::before {
+  content: "➤";
+  position: absolute;
+  left: -10px;
+  color: cyan;
+}
+
+.future {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.future h2 {
+  color: cyan;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.future p {
+  color: #ccc;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 15px;
+  text-align: center;
+  border-top: 2px solid cyan;
+  color: #aaa;
+  font-size: 0.9rem;
+}
