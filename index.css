@@ -138,36 +138,7 @@ section p {
   line-height: 1.7;
 }
 
-/* ===== Applications Section ===== */
-.app-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
-}
 
-.app-card {
-  background: #151515;
-  border-radius: 15px;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.app-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.app-card h3 {
-  color: #ff004f;
-  margin-bottom: 10px;
-}
-
-.app-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 20px rgba(255, 0, 79, 0.3);
-}
 
 /* ===== Team Section ===== */
 .team-container {
