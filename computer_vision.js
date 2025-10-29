@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }, { threshold: 0.3 });
+
     document.querySelectorAll(".autoDisplay").forEach(el => observer.observe(el));
 
     // Core Topics: initial box & cards
@@ -20,10 +21,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll('.card');
 
     // Show cards on initial box click
-    initialBox.addEventListener('click', () => {
-        cardsContainer.style.display = 'block';
-        initialBox.style.display = 'none';
-    });
+    if (initialBox && cardsContainer) {
+        initialBox.addEventListener('click', () => {
+            cardsContainer.style.display = 'block';
+            initialBox.style.display = 'none';
+        });
+    }
 
     // Expand/collapse cards (video click handled separately)
     cards.forEach(card => {
@@ -48,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const isActive = card.classList.contains('active');
             card.classList.toggle('active');
 
-            // If the card is being closed, stop its video
+            // Stop video if card is being closed
             const video = card.querySelector('video');
             if (video && isActive) {
                 video.pause();
@@ -64,12 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
         video.addEventListener('click', (e) => {
             e.stopPropagation(); // prevent triggering card click
             if (video.paused) {
-                // Unmute and play
                 video.muted = false;
                 video.volume = 1.0;
                 video.play();
             } else {
-                // Pause and mute again
                 video.pause();
                 video.muted = true;
             }
@@ -79,7 +80,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Card button alerts (optional)
     document.querySelectorAll('.card button').forEach(button => {
         button.addEventListener('click', (e) => {
-            const topic = e.target.closest('.card').querySelector('.card-sentence').innerText;
+            e.stopPropagation();
+            const card = e.target.closest('.card');
+            const topicElement = card ? card.querySelector('.card-sentence') : null;
+            const topic = topicElement ? topicElement.innerText : "this topic";
             alert(`Learn more about ${topic} in Computer Vision.`);
         });
     });
@@ -88,11 +92,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const heroVideo = document.querySelector('.hero-video');
     const videoList = [
         'videos/cv-6.mp4',
+        // Add more videos if needed
     ];
-    let videoIndex = 0;
-    setInterval(() => {
-        videoIndex++;
-        if (videoIndex >= videoList.length) videoIndex = 0;
-        heroVideo.src = videoList[videoIndex];
-    }, 8000);
+
+    if (heroVideo) {
+        let videoIndex = 0;
+        setInterval(() => {
+            videoIndex = (videoIndex + 1) % videoList.length;
+            heroVideo.src = videoList[videoIndex];
+        }, 8000);
+    }
 });
