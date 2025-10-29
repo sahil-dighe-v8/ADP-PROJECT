@@ -1,222 +1,318 @@
-/* ====== GLOBAL RESET ====== */
+/* ===== Global Reset ===== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    background: #0a0a0a;
-    color: #fff;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0b0b0b;
+  color: #fff;
+  scroll-behavior: smooth;
 }
 
-/* ====== HEADER ====== */
+/* ===== Header ===== */
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(10, 10, 10, 0.9);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 60px;
-    border-bottom: 1px solid #1a1a1a;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
-header .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-header .logo img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+.logo img {
+  height: 45px;
 }
 
-header .logo h1 {
-    font-size: 1.3rem;
-    color: #00e0ff;
-    letter-spacing: 1px;
+.logo h1 {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #ff004f;
 }
 
 nav a {
-    color: #ccc;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: 500;
-    transition: 0.3s ease;
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
 }
 
 nav a:hover,
 nav a.active {
-    color: #00e0ff;
+  color: #ff004f;
 }
 
-/* ====== HERO SECTION ====== */
+/* ===== Hero Section ===== */
 .hero {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .hero-video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.9));
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 0 20px;
-    animation: fadeIn 2s ease-in-out;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 10;
+  color: #fff;
 }
 
 .hero-content h2 {
-    font-size: 3rem;
-    color: #00e0ff;
-    margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  animation: fadeUp 1.2s ease forwards;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    color: #ddd;
-    margin-bottom: 30px;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 25px;
+  animation: fadeUp 1.8s ease forwards;
 }
 
 .cta-btn {
-    background: #00e0ff;
-    color: #000;
-    padding: 12px 28px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background-color: #ff004f;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
+  animation: fadeUp 2.2s ease forwards;
 }
 
 .cta-btn:hover {
-    background: #00bcd4;
+  background: #ff3366;
+  transform: scale(1.05);
 }
 
-/* ====== SECTIONS ====== */
+/* ===== Section Styles ===== */
 section {
-    padding: 90px 10%;
-    text-align: center;
+  padding: 100px 10%;
+  text-align: center;
 }
 
 section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    color: #00e0ff;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ff004f;
 }
 
 section p {
-    max-width: 850px;
-    margin: 0 auto;
-    color: #ccc;
-    font-size: 1rem;
-    line-height: 1.7;
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.7;
 }
 
-/* ====== TEAM SECTION ====== */
-.team {
-    background: #0d0d0d;
+/* ===== Applications Section ===== */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
 }
 
+.app-card {
+  background: #151515;
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.app-card h3 {
+  color: #ff004f;
+  margin-bottom: 10px;
+}
+
+.app-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(255, 0, 79, 0.3);
+}
+
+/* ===== Team Section ===== */
 .team-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 35px;
-    margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
 }
 
 .team-card {
-    background: #141414;
-    border-radius: 15px;
-    padding: 20px;
-    width: 230px;
-    transition: 0.3s;
-    text-align: center;
-}
-
-.team-card:hover {
-    transform: translateY(-10px);
-    background: #1f1f1f;
-    box-shadow: 0 0 15px rgba(0, 224, 255, 0.2);
+  background: #151515;
+  border-radius: 15px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-card img {
-    width: 100%;
-    height: 220px;
-    border-radius: 10px;
-    object-fit: cover;
-    margin-bottom: 15px;
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
 }
 
-.team-card h3 {
-    color: #00e0ff;
-    margin-bottom: 8px;
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(255, 0, 79, 0.3);
 }
 
-.team-card p {
-    color: #bbb;
-    font-size: 0.9rem;
-}
-
-/* ====== FOOTER ====== */
+/* ===== Footer ===== */
 footer {
-    background: #0a0a0a;
-    text-align: center;
-    padding: 25px 0;
-    color: #777;
-    border-top: 1px solid #1a1a1a;
+  background: #101010;
+  padding: 60px 10% 30px;
+  color: #ddd;
 }
 
-/* ====== ANIMATIONS ====== */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(-50%); }
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-/* ====== RESPONSIVE DESIGN ====== */
-@media (max-width: 900px) {
-    header {
-        flex-direction: column;
-        padding: 15px 30px;
-    }
-
-    nav {
-        margin-top: 10px;
-    }
-
-    .hero-content h2 {
-        font-size: 2.3rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .team-card {
-        width: 85%;
-    }
+.footer-section h3 {
+  color: #ff004f;
+  margin-bottom: 15px;
 }
+
+.footer-section p,
+.footer-section ul li a {
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section ul li a:hover {
+  color: #ff004f;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #222;
+  margin-top: 30px;
+  padding-top: 15px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* ===== Fade In Animation ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px 25px;
+  }
+
+  .hero-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+}
+
+/* ===== Scroll to Top Button ===== */
+#scrollToTop {
+  position: fixed;
+  bottom: 35px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ff004f;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+#scrollToTop.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#scrollToTop:hover {
+  background-color: #37d4c2;
+  transform: scale(1.1);
+}
+
+/* ===== Shrinking Header Effect ===== */
+header.scrolled {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 8px 50px;
+  transition: all 0.3s ease;
+}
+

@@ -1,26 +1,45 @@
-// Card tilt effect
-const cards = document.querySelectorAll('.feature-card');
-
-cards.forEach(card => {
-    card.addEventListener('mousemove', e => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const cx = rect.width/2;
-        const cy = rect.height/2;
-        const dx = (x-cx)/cx;
-        const dy = (y-cy)/cy;
-        card.style.transform = `rotateY(${dx*10}deg) rotateX(${-dy*10}deg) scale(1.05)`;
-    });
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'rotateY(0deg) rotateX(0deg) scale(1)';
-    });
+// ===== Shrinking Header on Scroll =====
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
 });
 
-// Smooth scroll for links
-document.querySelectorAll('header a').forEach(link => {
-    link.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector(link.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-    });
+// ===== Fade-in on Scroll =====
+const fadeElements = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+fadeElements.forEach(el => observer.observe(el));
+
+// ===== Scroll-to-Top Button =====
+const scrollBtn = document.createElement("button");
+scrollBtn.innerHTML = "↑";
+scrollBtn.id = "scrollToTop";
+document.body.appendChild(scrollBtn);
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+});
+
+// ===== Parallax Hero Effect =====
+const hero = document.querySelector(".hero");
+window.addEventListener("scroll", () => {
+  const offset = window.scrollY * 0.4;
+  hero.style.backgroundPositionY = offset + "px";
 });

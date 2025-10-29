@@ -1,116 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Computer Vision | Home</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Computer Vision | Home</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <img src="img/logo.png" alt="AI Vision Logo">
-            <h1>ARTIFITIAL INTELLIGENCE
-            </h1>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="AI Vision Logo">
+      <h1>ARTIFICIAL INTELLIGENCE</h1>
+    </div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="try.html">Intro</a>
+      <a href="#ml">Machine Learning</a>
+      <a href="#dl">Deep Learning</a>
+      <a href="computer_vision.html">Computer Vision</a>
+      <a href="#team">Team</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="video/ai-vision.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h2>Empowering the Future Through Vision</h2>
+      <p>Where Artificial Intelligence meets sight — transforming pixels into possibilities.</p>
+      <a href="#about" class="cta-btn">Discover More</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about fade-in">
+    <div class="content">
+      <h2>About AI</h2>
+      <p>
+        Artificial Intelligence enables machines to analyze and interpret the world visually.
+        Through Computer Vision, AI systems can recognize faces, detect objects, and understand
+        complex visual scenes — bridging the gap between human perception and machine intelligence.
+      </p>
+    </div>
+  </section>
+
+  <!-- Applications Section -->
+  <section id="applications" class="applications fade-in">
+    <div class="content">
+      <h2>Applications of AI</h2>
+      <div class="app-grid">
+        <div class="app-card">
+          <img src="img/healthcare.jpg" alt="Healthcare AI">
+          <h3>Healthcare</h3>
+          <p>AI assists in diagnosing diseases from medical images, improving accuracy and saving lives.</p>
         </div>
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="try.html">Intro</a>
-            <a href="#ml">Machine Learning</a>
-            <a href="#dl">Deep Learning</a>
-            <a href="computer_vision.html">Computer Vision</a>
-            <a href="#team">Team</a>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <video autoplay muted loop playsinline class="hero-video">
-            <source src="video/ai-vision.mp4" type="video/mp4">
-        </video>
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h2>Empowering the Future Through Vision</h2>
-            <p>Where Artificial Intelligence meets sight — transforming pixels into possibilities.</p>
-            <a href="#about" class="cta-btn">Discover More</a>
+        <div class="app-card">
+          <img src="img/security.jpg" alt="Security AI">
+          <h3>Security</h3>
+          <p>Facial recognition and behavior analysis help enhance security systems worldwide.</p>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="content">
-            <h2>About AI</h2>
-            <p>
-                Artificial Intelligence enables machines to analyze and interpret the world visually.
-                Through Computer Vision, AI systems can recognize faces, detect objects, and understand
-                complex visual scenes — bridging the gap between human perception and machine intelligence.
-            </p>
+        <div class="app-card">
+          <img src="img/automation.jpg" alt="Automation">
+          <h3>Automation</h3>
+          <p>From manufacturing to autonomous vehicles, AI drives intelligent automation in every field.</p>
         </div>
-    </section>
-
-    <!-- Machine Learning Section -->
-    <section id="ml" class="ml">
-        <div class="content">
-            <h2>Machine Learning</h2>
-            <p>
-                Machine Learning allows computers to learn from data and make predictions or decisions
-                without being explicitly programmed. It forms the foundation of modern AI systems.
-            </p>
+        <div class="app-card">
+          <img src="img/environment.jpg" alt="Environment">
+          <h3>Environment</h3>
+          <p>AI helps monitor deforestation, track pollution, and analyze climate data for a sustainable future.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Deep Learning Section -->
-    <section id="dl" class="dl">
-        <div class="content">
-            <h2>Deep Learning</h2>
-            <p>
-                Deep Learning takes Machine Learning further by using neural networks to mimic how humans
-                think and learn — unlocking powerful applications in image, video, and speech recognition.
-            </p>
-        </div>
-    </section>
+  <!-- Machine Learning Section -->
+  <section id="ml" class="ml fade-in">
+    <div class="content">
+      <h2>Machine Learning</h2>
+      <p>
+        Machine Learning allows computers to learn from data and make predictions or decisions
+        without being explicitly programmed. It forms the foundation of modern AI systems.
+      </p>
+    </div>
+  </section>
 
-    <!-- Team Section -->
-    <section id="team" class="team">
-        <h2>Meet Our Team</h2>
-        <div class="team-container">
-            <div class="team-card">
-                <img src="img/team1.jpg" alt="Alice Johnson">
-                <h3>Alice Johnson</h3>
-                <p>Object Detection Specialist</p>
-            </div>
+  <!-- Deep Learning Section -->
+  <section id="dl" class="dl fade-in">
+    <div class="content">
+      <h2>Deep Learning</h2>
+      <p>
+        Deep Learning takes Machine Learning further by using neural networks to mimic how humans
+        think and learn — unlocking powerful applications in image, video, and speech recognition.
+      </p>
+    </div>
+  </section>
 
-            <div class="team-card">
-                <img src="img/team2.jpg" alt="Bob Smith">
-                <h3>Bob Smith</h3>
-                <p>Facial Recognition Engineer</p>
-            </div>
+  <!-- Team Section -->
+  <section id="team" class="team fade-in">
+    <h2>Meet Our Team</h2>
+    <div class="team-container">
+      <div class="team-card">
+        <img src="img/team1.jpg" alt="Alice Johnson">
+        <h3>Alice Johnson</h3>
+        <p>Object Detection Specialist</p>
+      </div>
+      <div class="team-card">
+        <img src="img/team2.jpg" alt="Bob Smith">
+        <h3>Bob Smith</h3>
+        <p>Facial Recognition Engineer</p>
+      </div>
+      <div class="team-card">
+        <img src="img/sahil.jpg" alt="Sahil Dighe">
+        <h3>Sahil Dighe</h3>
+        <p>Computer Vision Developer</p>
+      </div>
+      <div class="team-card">
+        <img src="img/team4.jpg" alt="David Kim">
+        <h3>David Kim</h3>
+        <p>Video Analytics Expert</p>
+      </div>
+      <div class="team-card">
+        <img src="img/team5.jpg" alt="Eva Patel">
+        <h3>Eva Patel</h3>
+        <p>AI Systems Designer</p>
+      </div>
+    </div>
+  </section>
 
-            <div class="team-card">
-                <img src="img/sahil.jpg" alt="Sahil Dighe">
-                <h3>Sahil Dighe</h3>
-                <p>Computer Vision Developer</p>
-            </div>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>About Us</h3>
+        <p>
+          AI Computer Vision is dedicated to exploring how artificial intelligence interprets and understands the world.
+          Our goal is to push the boundaries of innovation and build intelligent systems that empower industries and people.
+        </p>
+      </div>
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#about">About AI</a></li>
+          <li><a href="#applications">Applications</a></li>
+          <li><a href="#ml">Machine Learning</a></li>
+          <li><a href="#dl">Deep Learning</a></li>
+          <li><a href="#team">Our Team</a></li>
+        </ul>
+      </div>
+      <div class="footer-section contact">
+        <h3>Contact</h3>
+        <p>Email: info@aicomputervision.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Location: Pune, India</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 AI Computer Vision | Designed by Sahil Dighe</p>
+    </div>
+  </footer>
 
-            <div class="team-card">
-                <img src="img/team4.jpg" alt="David Kim">
-                <h3>David Kim</h3>
-                <p>Video Analytics Expert</p>
-            </div>
-
-            <div class="team-card">
-                <img src="img/team5.jpg" alt="Eva Patel">
-                <h3>Eva Patel</h3>
-                <p>AI Systems Designer</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 AI Computer Vision | Designed by Sahil Dighe</p>
-    </footer>
+  <script>
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    fadeElements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
