@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    color: white;
+}
+
+/* Header */
+header {
+    background-color:black ;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+header h1 {
+    font-size: 32px;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header h2 {
+    color: white;
+    font-size: 26px;
+    margin-top: 10px;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* Navigation */
+nav {
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    justify-content: center;
+    padding: 10px 40px;
+    gap: 15px;
+    border-bottom: 1px solid rgb(70, 70, 70);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: rgb(0, 255, 255);
+    color: black;
+}
+
+nav a.active {
+    background-color: rgb(0, 255, 255);
+    color: black;
+    font-weight: bold;
+}
+
+/* Section */
+section {
+    width: 80%;
+    margin: 40px auto;
+    background-color: rgb(15, 15, 15);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgb(0, 255, 255);
+}
+
+h3 {
+    color: rgb(0, 255, 255);
+    border-bottom: 1px solid rgb(60, 60, 60);
+    padding-bottom: 6px;
+}
+
+/* Text */
+p {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+ul, ol {
+    margin-left: 30px;
+    line-height: 28px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: rgb(25, 25, 25);
+    color: white;
+}
+
+th, td {
+    border: 1px solid rgb(80, 80, 80);
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(0, 255, 254);
+    color: black;
+}
+
+
+/* Video */
+.video-box {
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(20, 20, 20);
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 16px;
+    border-top: 1px solid rgb(80, 80, 80);
+}
