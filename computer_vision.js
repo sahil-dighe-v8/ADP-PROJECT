@@ -33,9 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- Card Expand/Collapse ---
     cards.forEach(card => {
         card.addEventListener('click', (e) => {
-            // Ignore direct clicks on videos
-            if (e.target.tagName.toLowerCase() === 'video') return;
-
             // Collapse all other cards
             cards.forEach(c => {
                 if (c !== card) {
@@ -79,14 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // --- Card Button Alerts ---
-    document.querySelectorAll('.card button').forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const topic = e.target.closest('.card')?.querySelector('.card-sentence')?.innerText || "this topic";
-            alert(`Learn more about ${topic} in Computer Vision.`);
-        });
-    });
 
     // --- Hero Video Rotation ---
     const heroVideo = document.querySelector('.hero-video');
